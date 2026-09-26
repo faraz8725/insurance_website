@@ -1,0 +1,140 @@
+.signup-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 24px;
+  background: #ffffff;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 42px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-header>span {
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.signup-header h1 {
+  margin: 12px 0;
+  color: #111111;
+  font-size: 38px;
+  letter-spacing: -1.5px;
+}
+
+.signup-header h1 strong {
+  color: #f97316;
+}
+
+.signup-header p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #111111;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.form-group input::placeholder {
+  color: #aaaaaa;
+}
+
+.form-group input:focus {
+  border-color: #f97316;
+  background: #fff7ed;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.08);
+}
+
+.signup-button {
+  margin-top: 5px;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #f97316;
+  border-radius: 8px;
+  background: #f97316;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.signup-button:hover {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.signup-footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.signup-footer p {
+  color: #777777;
+  font-size: 14px;
+}
+
+.signup-footer a {
+  color: #f97316;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signup-page {
+    padding: 40px 18px;
+  }
+
+  .signup-card {
+    padding: 30px 22px;
+  }
+
+  .signup-header h1 {
+    font-size: 32px;
+  }
+}

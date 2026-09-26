@@ -1,0 +1,297 @@
+/*.footer {
+  padding: 75px 24px 25px;
+
+  background: #111111;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+
+  gap: 50px;
+
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #f97316;
+}
+
+.footer-brand>p {
+  max-width: 270px;
+
+  margin: 18px 0;
+
+  color: #888888;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #333333;
+  border-radius: 50%;
+
+  color: #aaaaaa;
+  text-decoration: none;
+
+  font-size: 11px;
+
+  transition: 0.25s ease;
+}
+
+.social-links a:hover {
+  background: #fff7ed;
+  color: #f97316;
+  border-color: #f97316;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-column h4 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.footer-column a {
+  color: #888888;
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #f97316;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: auto;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #292929;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #666666;
+  font-size: 11px;
+}
+
+@media (max-width: 850px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 60px 18px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+} */
+
+
+
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 75px 24px 25px;
+
+  background: #ffffff;
+  color: #111111;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+
+  gap: 50px;
+
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  color: #111111;
+  font-size: 27px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #f97316;
+}
+
+.footer-brand>p {
+  max-width: 270px;
+
+  margin: 18px 0;
+
+  color: #555555;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+
+  color: #555555;
+  text-decoration: none;
+
+  font-size: 11px;
+
+  transition: 0.25s ease;
+}
+
+.social-links a:hover {
+  background: #fff7ed;
+  color: #f97316;
+  border-color: #f97316;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-column h4 {
+  margin: 0 0 8px;
+
+  color: #111111;
+  font-size: 13px;
+}
+
+.footer-column a {
+  color: #666666;
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #f97316;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: auto;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #e5e5e5;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #777777;
+  font-size: 11px;
+}
+
+@media (max-width: 850px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 60px 18px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}

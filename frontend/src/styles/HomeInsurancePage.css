@@ -1,0 +1,54 @@
+.home-insurance-page {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.home-insurance-content {
+  max-width: 800px;
+}
+
+.home-insurance-content>span {
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.home-insurance-content h1 {
+  margin: 18px 0;
+  color: #111111;
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.home-insurance-content h1 strong {
+  color: #f97316;
+}
+
+.home-insurance-content p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #777777;
+  line-height: 1.7;
+}
+
+.home-insurance-content button {
+  padding: 14px 24px;
+  border: 1px solid #f97316;
+  border-radius: 8px;
+  background: #f97316;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.home-insurance-content button:hover {
+  background: #fff7ed;
+  color: #f97316;
+}

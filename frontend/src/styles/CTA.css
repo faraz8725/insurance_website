@@ -1,0 +1,84 @@
+.cta-section {
+  padding: 30px 24px 100px;
+  background: #ffffff;
+}
+
+.cta-container {
+  max-width: 1100px;
+  margin: auto;
+
+  padding: 55px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  background: white;
+  border-radius: 22px;
+
+  color: #ffffff;
+}
+
+.cta-small {
+  color: #fb923c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.cta-container h2 {
+  margin: 12px 0;
+
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.cta-container p {
+  margin: 0;
+
+  color: black;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.cta-button {
+  flex-shrink: 0;
+
+  padding: 14px 21px;
+
+  background: #f97316;
+  color: #ffffff;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.cta-button:hover {
+  background: rgb(255, 165, 0);
+  color: #f97316;
+}
+
+.cta-button span {
+  margin-left: 8px;
+}
+
+@media (max-width: 700px) {
+  .cta-container {
+    padding: 40px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}

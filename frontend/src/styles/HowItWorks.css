@@ -1,0 +1,98 @@
+.how-section {
+  padding: 100px 24px;
+  background: #fafafa;
+}
+
+.how-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.how-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.how-heading h2 {
+  margin: 10px 0 15px;
+
+  font-size: clamp(38px, 5vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.how-heading h2 span {
+  color: #f97316;
+}
+
+.how-heading p {
+  color: #777777;
+  line-height: 1.7;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.step-card {
+  padding: 28px;
+
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 17px;
+
+  transition: 0.3s ease;
+}
+
+.step-card:hover {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  transform: translateY(-5px);
+}
+
+.step-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+  background: #fff7ed;
+
+  font-size: 23px;
+}
+
+.step-top>span {
+  color: #dddddd;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.step-card h3 {
+  margin: 35px 0 10px;
+  font-size: 19px;
+}
+
+.step-card p {
+  margin: 0;
+
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
