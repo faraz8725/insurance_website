@@ -138,3 +138,28 @@
     font-size: 32px;
   }
 }
+
+
+/* STARTING */
+.form-error {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #fff1f2;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.form-success {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 13px;
+}
+
+.signup-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -138,3 +138,20 @@
     padding: 28px 22px;
   }
 }
+
+/* staring*/
+
+
+.form-error {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #fff1f2;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.login-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
