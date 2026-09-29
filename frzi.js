@@ -22,3 +22,32 @@
 
 
           line 153-174
+
+
+line 100-123
+
+          <Route
+                  path="/insurance/life"
+                  element={<LifeInsurancePage />}
+                />
+          
+                <Route
+                  path="/insurance/car"
+                  element={<CarInsurancePage />}
+                />
+          
+                <Route
+                  path="/insurance/bike"
+                  element={<BikeInsurancePage />}
+                />
+          
+                <Route
+                  path="/insurance/home"
+                  element={<HomeInsurancePage />}
+                />
+          
+                <Route
+                  path="/insurance/travel"
+                  element={<TravelInsurancePage />}
+                />
+          
