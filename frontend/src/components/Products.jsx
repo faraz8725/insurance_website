@@ -1,45 +1,55 @@
-/*import { Link } from "react-router-dom";
+
+/*
+
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import API_BASE_URL from "../config/api";
 import "../styles/Products.css";
 
 function Products() {
-  const products = [
-    {
-      icon: "🏥",
-      title: "Health Insurance",
-      description:
-        "Get financial protection against unexpected medical expenses."
-    },
-    {
-      icon: "❤️",
-      title: "Life Insurance",
-      description:
-        "Help secure your family's financial future with flexible protection."
-    },
-    {
-      icon: "🚗",
-      title: "Car Insurance",
-      description:
-        "Protect your vehicle from accidents, damage and unexpected costs."
-    },
-    {
-      icon: "🏠",
-      title: "Home Insurance",
-      description:
-        "Protect your home and valuable belongings from covered risks."
-    },
-    {
-      icon: "✈️",
-      title: "Travel Insurance",
-      description:
-        "Travel with confidence knowing you're protected on your journey."
-    },
-    {
-      icon: "💼",
-      title: "Business Insurance",
-      description:
-        "Protect your business against unexpected events and liabilities."
-    }
-  ];
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getIcon = (category) => {
+    const icons = {
+      health: "🏥",
+      life: "❤️",
+      car: "🚗",
+      bike: "🏍️",
+      home: "🏠",
+      travel: "✈️",
+      business: "💼",
+    };
+
+    return icons[category] || "🛡️";
+  };
+
+  const getLink = (category) => {
+    return `/insurance/${category}`;
+  };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(
+          `${API_BASE_URL}/products`
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+          setProducts(data);
+        }
+      } catch (error) {
+        console.error("Failed to load products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <section className="products-section">
@@ -47,7 +57,9 @@ function Products() {
 
         <div className="section-heading">
           <div>
-            <span className="section-tag">OUR PRODUCTS</span>
+            <span className="section-tag">
+              OUR PRODUCTS
+            </span>
 
             <h2>
               Coverage for every
@@ -62,25 +74,33 @@ function Products() {
         </div>
 
         <div className="products-grid">
-          {products.map((product, index) => (
-            <Link
-              to="/products"
-              className="product-card"
-              key={index}
-            >
-              <div className="product-icon">
-                {product.icon}
-              </div>
 
-              <h3>{product.title}</h3>
+          {loading ? (
+            <p>Loading products...</p>
+          ) : products.length === 0 ? (
+            <p>No insurance products available.</p>
+          ) : (
+            products.map((product) => (
+              <Link
+                to={getLink(product.category)}
+                className="product-card"
+                key={product._id}
+              >
+                <div className="product-icon">
+                  {getIcon(product.category)}
+                </div>
 
-              <p>{product.description}</p>
+                <h3>{product.title}</h3>
 
-              <span className="product-link">
-                Explore coverage →
-              </span>
-            </Link>
-          ))}
+                <p>{product.description}</p>
+
+                <span className="product-link">
+                  Explore coverage →
+                </span>
+              </Link>
+            ))
+          )}
+
         </div>
 
       </div>
@@ -88,58 +108,58 @@ function Products() {
   );
 }
 
-export default Products; */
+export default Products;
+ */
 
 
-
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+import API_BASE_URL from "../config/api";
 import "../styles/Products.css";
 
 function Products() {
-  const products = [
-    {
-      icon: "🏥",
-      title: "Health Insurance",
-      description:
-        "Get financial protection against unexpected medical expenses.",
-      link: "/insurance/health",
-    },
-    {
-      icon: "❤️",
-      title: "Life Insurance",
-      description:
-        "Help secure your family's financial future with flexible protection.",
-      link: "/insurance/life",
-    },
-    {
-      icon: "🚗",
-      title: "Car Insurance",
-      description:
-        "Protect your vehicle from accidents, damage and unexpected costs.",
-      link: "/insurance/car",
-    },
-    {
-      icon: "🏠",
-      title: "Home Insurance",
-      description:
-        "Protect your home and valuable belongings from covered risks.",
-      link: "/insurance/home",
-    },
-    {
-      icon: "✈️",
-      title: "Travel Insurance",
-      description:
-        "Travel with confidence knowing you're protected on your journey.",
-      link: "/insurance/travel",
-    },
-    {
-      icon: "💼",
-      title: "Business Insurance",
-      description:
-        "Protect your business against unexpected events and liabilities.",
-      link: "/insurance/business",
-    },
-  ];
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getIcon = (category) => {
+    const icons = {
+      health: "🏥",
+      life: "❤️",
+      car: "🚗",
+      bike: "🏍️",
+      home: "🏠",
+      travel: "✈️",
+      business: "💼",
+    };
+
+    return icons[category] || "🛡️";
+  };
+
+  useEffect(() => {
+    const fetchFeaturedProducts = async () => {
+      try {
+        const response = await fetch(
+          `${API_BASE_URL}/products?featured=true`
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+          setProducts(data);
+        }
+      } catch (error) {
+        console.error(
+          "Failed to load featured products:",
+          error
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFeaturedProducts();
+  }, []);
 
   return (
     <section className="products-section">
@@ -147,7 +167,9 @@ function Products() {
 
         <div className="section-heading">
           <div>
-            <span className="section-tag">OUR PRODUCTS</span>
+            <span className="section-tag">
+              OUR PRODUCTS
+            </span>
 
             <h2>
               Coverage for every
@@ -162,25 +184,35 @@ function Products() {
         </div>
 
         <div className="products-grid">
-          {products.map((product, index) => (
-            <Link
-              to={product.link}
-              className="product-card"
-              key={index}
-            >
-              <div className="product-icon">
-                {product.icon}
-              </div>
 
-              <h3>{product.title}</h3>
+          {loading ? (
+            <p>Loading products...</p>
+          ) : products.length === 0 ? (
+            <p>
+              No featured insurance products available.
+            </p>
+          ) : (
+            products.map((product) => (
+              <Link
+                to={`/insurance/product/${product._id}`}
+                className="product-card"
+                key={product._id}
+              >
+                <div className="product-icon">
+                  {getIcon(product.category)}
+                </div>
 
-              <p>{product.description}</p>
+                <h3>{product.title}</h3>
 
-              <span className="product-link">
-                Explore coverage →
-              </span>
-            </Link>
-          ))}
+                <p>{product.description}</p>
+
+                <span className="product-link">
+                  Explore More →
+                </span>
+              </Link>
+            ))
+          )}
+
         </div>
 
       </div>

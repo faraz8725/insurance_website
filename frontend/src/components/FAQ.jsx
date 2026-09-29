@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import "../styles/FAQ.css";
 
 function FAQ() {
@@ -84,4 +84,107 @@ function FAQ() {
   );
 }
 
+export default FAQ;  */
+
+
+
+
+
+import { useEffect, useState } from "react";
+
+import API_BASE_URL from "../config/api";
+import "../styles/FAQ.css";
+
+function FAQ() {
+  const [active, setActive] = useState(null);
+  const [faqs, setFaqs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const toggleFAQ = (index) => {
+    setActive(active === index ? null : index);
+  };
+
+  useEffect(() => {
+    const fetchFAQs = async () => {
+      try {
+        const response = await fetch(
+          `${API_BASE_URL}/faqs`
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+          setFaqs(data);
+        }
+      } catch (error) {
+        console.error("Failed to load FAQs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFAQs();
+  }, []);
+
+  return (
+    <section className="faq-section">
+      <div className="faq-container">
+
+        <div className="faq-heading">
+          <span className="section-tag">
+            FAQ
+          </span>
+
+          <h2>
+            Questions?
+            <span> We've got answers.</span>
+          </h2>
+
+          <p>
+            Find quick answers to some of the most common
+            questions about insurance and our services.
+          </p>
+        </div>
+
+        <div className="faq-list">
+
+          {loading ? (
+            <p>Loading FAQs...</p>
+          ) : faqs.length === 0 ? (
+            <p>No FAQs available.</p>
+          ) : (
+            faqs.map((faq, index) => (
+              <div
+                className={`faq-item ${
+                  active === index ? "active" : ""
+                }`}
+                key={faq._id}
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <span>{faq.question}</span>
+
+                  <span className="faq-icon">
+                    {active === index ? "−" : "+"}
+                  </span>
+                </button>
+
+                {active === index && (
+                  <div className="faq-answer">
+                    <p>{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))
+          )}
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 export default FAQ;
+
