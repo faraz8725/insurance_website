@@ -112,7 +112,7 @@ mongoose
 
 
 
-  
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -141,7 +141,8 @@ app.use(
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://insurance-website-sooty.vercel.app"
+    "https://insurance-website-sooty.vercel.app",
+    "https://policynews.in"
   ],
   credentials: true
 };
