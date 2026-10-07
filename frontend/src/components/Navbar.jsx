@@ -377,7 +377,7 @@ function Navbar() {
 
         {/* LOGO */}
         <Link to="/" className="logo">
-          Insure<span>X</span>
+          Policy<span>News</span>
         </Link>
 
 
