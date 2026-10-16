@@ -1,0 +1,134 @@
+.news-page {
+  min-height: 60vh;
+  background: #fafafa;
+}
+
+.news-page-header {
+  padding: 70px 20px 55px;
+  background: #fff7ed;
+  text-align: center;
+}
+
+.news-page-header span {
+  color: #f97316;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.news-page-header h1 {
+  margin: 12px 0;
+  color: #111;
+  font-size: clamp(32px, 5vw, 46px);
+}
+
+.news-page-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.news-page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 24px 75px;
+}
+
+.news-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.news-page-card {
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.news-page-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.news-page-card>img,
+.news-page-placeholder {
+  display: flex;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #fff7ed;
+}
+
+.news-page-placeholder {
+  align-items: center;
+  justify-content: center;
+  color: #f97316;
+  font-weight: 700;
+}
+
+.news-page-card-content {
+  padding: 22px;
+}
+
+.news-page-card-content small {
+  color: #999;
+  font-size: 11px;
+}
+
+.news-page-card-content h2 {
+  margin: 12px 0;
+  color: #111;
+  font-size: 19px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.news-page-card-content p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.news-page-card-content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f97316;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.news-page-card-content a:hover {
+  color: #c2410c;
+}
+
+.news-page-message {
+  padding: 30px;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .news-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .news-page-header {
+    padding: 50px 20px 40px;
+  }
+
+  .news-page-content {
+    padding: 30px 16px 50px;
+  }
+
+  .news-page-grid {
+    grid-template-columns: 1fr;
+  }
+}

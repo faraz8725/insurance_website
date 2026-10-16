@@ -6,7 +6,7 @@ import HowItWorks from "../components/HowItWorks";
 import FAQ from "../components/FAQ";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
-
+import News from "../components/News";
 import "../styles/Home.css";
 
 function Home() {
@@ -17,6 +17,7 @@ function Home() {
       <main>
         <Hero />
         <Products />
+        <News />
         <WhyChooseUs />
         <HowItWorks />
         <FAQ />
