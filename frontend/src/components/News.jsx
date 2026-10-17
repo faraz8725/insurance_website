@@ -59,7 +59,7 @@ function News() {
           <div>
             <span className="home-news-eyebrow">LATEST UPDATES</span>
             <h2>News & Insights</h2>
-            <p>Stay informed with the latest updates from InsureX.</p>
+            <p>Stay informed with the latest updates from PolicyNews.</p>
           </div>
 
           <Link to="/news" className="home-news-view-all">
@@ -88,7 +88,7 @@ function News() {
                   />
                 ) : (
                   <div className="home-news-image home-news-image-placeholder">
-                    InsureX News
+                    Policy News
                   </div>
                 )}
 

@@ -8,12 +8,7 @@ import SupportPage from "./pages/SupportPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 
-import HealthInsurancePage from "./pages/HealthInsurancePage";
-import LifeInsurancePage from "./pages/LifeInsurancePage";
-import CarInsurancePage from "./pages/CarInsurancePage";
-import BikeInsurancePage from "./pages/BikeInsurancePage";
-import HomeInsurancePage from "./pages/HomeInsurancePage";
-import TravelInsurancePage from "./pages/TravelInsurancePage";
+
 import ProductDetailPage from "./pages/ProductDetailPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import NewsPage from "./pages/NewsPage";
@@ -30,8 +25,8 @@ function App() {
       />
 
 
-<Route path="/news" element={<NewsPage />} />
-<Route path="/news/:id" element={<NewsDetailPage />} />
+      <Route path="/news" element={<NewsPage />} />
+      <Route path="/news/:id" element={<NewsDetailPage />} />
       <Route
         path="/resources"
         element={<ResourcesPage />}
@@ -52,13 +47,13 @@ function App() {
         element={<SignupPage />}
       />
 
-      
 
-     <Route
-  path="/insurance/product/:id"
-  element={<ProductDetailPage />}
-/>
-      
+
+      <Route
+        path="/insurance/product/:id"
+        element={<ProductDetailPage />}
+      />
+
       <Route
         path="/admin"
         element={<AdminDashboard />}

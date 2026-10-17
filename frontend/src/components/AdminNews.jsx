@@ -181,7 +181,7 @@ function AdminNews() {
         <div>
           <span className="admin-news-eyebrow">CONTENT MANAGEMENT</span>
           <h2>News Management</h2>
-          <p>Create and manage news articles displayed on InsureX.</p>
+          <p>Create and manage news articles displayed on PolicyNews.</p>
         </div>
 
         <button

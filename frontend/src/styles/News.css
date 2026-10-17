@@ -155,3 +155,124 @@
     height: 220px;
   }
 }
+
+
+/* CATEGORY -> PRODUCTS NESTED DROPDOWN */
+
+.products-dropdown {
+  width: 245px;
+  max-height: 75vh;
+  overflow: visible;
+}
+
+.dropdown-message {
+  display: block;
+  padding: 11px 13px;
+  color: #777;
+  font-size: 13px;
+}
+
+.product-category-item {
+  position: relative;
+}
+
+.category-menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 13px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #333;
+  text-align: left;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.category-menu-button:hover,
+.product-category-item.submenu-open>.category-menu-button {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.submenu-arrow {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.product-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 5px);
+  width: 245px;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  z-index: 1002;
+}
+
+.product-category-item:hover>.product-submenu,
+.product-category-item.submenu-open>.product-submenu {
+  display: block;
+}
+
+.product-submenu a {
+  display: block;
+  padding: 11px 13px;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.product-submenu a:hover {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+/* MOBILE NESTED MENU */
+
+@media (max-width: 768px) {
+  .products-dropdown {
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .product-category-item {
+    width: 100%;
+  }
+
+  .product-submenu {
+    position: static;
+    width: 100%;
+    max-height: 260px;
+    margin: 3px 0 7px;
+    padding: 5px 8px 5px 16px;
+    overflow-y: auto;
+    border: none;
+    border-left: 2px solid #fed7aa;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fffaf5;
+  }
+
+  /* On mobile, tap a category to expand it. */
+  .product-category-item:hover>.product-submenu {
+    display: none;
+  }
+
+  .product-category-item.submenu-open>.product-submenu {
+    display: block;
+  }
+}

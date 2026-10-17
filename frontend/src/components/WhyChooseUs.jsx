@@ -24,7 +24,7 @@ function WhyChooseUs() {
       <div className="why-container">
 
         <div className="why-left">
-          <span className="section-tag">WHY INSUREX</span>
+          <span className="section-tag">WHY POLICYNEWS</span>
 
           <h2>
             Insurance without

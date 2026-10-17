@@ -4,9 +4,30 @@ const express = require("express");
 const InsuranceProduct = require("../models/InsuranceProduct");
 const FAQ = require("../models/FAQ");
 const Partner = require("../models/Partner");
-
+const Category = require("../models/Category");
 const router = express.Router();
 
+
+// ======================================
+// PUBLIC CATEGORIES
+// GET /api/categories
+// ======================================
+
+router.get("/categories", async (req, res) => {
+  try {
+    const categories = await Category.find({
+      active: true,
+    }).sort({ name: 1 });
+
+    res.json(categories);
+  } catch (error) {
+    console.error("Categories error:", error);
+
+    res.status(500).json({
+      message: "Unable to load categories",
+    });
+  }
+});
 
 // ======================================
 // PUBLIC PRODUCTS
