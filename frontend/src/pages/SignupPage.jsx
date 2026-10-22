@@ -184,7 +184,7 @@ function SignupPage() {
             <span>CREATE ACCOUNT</span>
 
             <h1>
-              Join <strong>InsureX.</strong>
+              Join <strong>PolicyNews.</strong>
             </h1>
 
             <p>

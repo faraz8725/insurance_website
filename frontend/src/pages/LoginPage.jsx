@@ -154,7 +154,7 @@ function LoginPage() {
         <div className="login-card">
 
           <div className="login-logo">
-            Insure<span>X</span>
+            Policy<span>News</span>
           </div>
 
           <h1>Welcome back</h1>

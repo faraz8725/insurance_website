@@ -3,3 +3,25 @@ https://insurance-website-1-upf0.onrender.com/api
 http://localhost:5000/api
 
 api.js of CONFIG
+
+        <label htmlFor="news-image">Image URL (optional)</label>
+        <input
+          id="news-image"
+          name="image"
+          type="url"
+          value={form.image}
+          onChange={handleChange}
+          placeholder="https://example.com/news-image.jpg"
+        />
+
+        {form.image && (
+          <div className="admin-news-image-preview">
+            <img
+              src={form.image}
+              alt="News preview"
+              onError={(event) => {
+                event.currentTarget.style.display = "none";
+              }}
+            />
+          </div>
+        )}
