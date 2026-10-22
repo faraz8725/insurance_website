@@ -14,6 +14,10 @@ const newsSchema = new mongoose.Schema(
       trim: true,
     },
 
+    imageKitFileId: {
+  type: String,
+  default: "",
+},
     summary: {
       type: String,
       required: true,
