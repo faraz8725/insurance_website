@@ -38,7 +38,7 @@ function NewsPage() {
 
       <main className="news-page">
         <header className="news-page-header">
-          <span>INSUREX UPDATES</span>
+          <span>POLICY UPDATES</span>
           <h1>News & Insights</h1>
           <p>Explore the latest announcements, updates and insurance insights.</p>
         </header>
@@ -57,7 +57,7 @@ function NewsPage() {
                   {item.image ? (
                     <img src={item.image} alt={item.title} loading="lazy" />
                   ) : (
-                    <div className="news-page-placeholder">InsureX News</div>
+                    <div className="news-page-placeholder">Policy News</div>
                   )}
 
                   <div className="news-page-card-content">
