@@ -57,7 +57,7 @@ function NewsDetailPage() {
             </div>
           ) : (
             <article className="news-detail-article">
-              <span className="news-detail-label">INSUREX NEWS</span>
+              <span className="news-detail-label">POLICY NEWS</span>
 
               <h1>{article.title}</h1>
 
