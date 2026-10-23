@@ -68,7 +68,7 @@ function NewsPage() {
                     </small>
                     <h2>{item.title}</h2>
                     <p>{item.summary}</p>
-                    <Link to={`/news/${item._id}`}>Read Full Article →</Link>
+                    
                     
 <Link to={`/news/${item.slug || item._id}`}>
   Read Full Article →
